@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ActionButtonStyle: ViewModifier {
+public struct ActionButtonStyle: ViewModifier {
     let closeButton: Bool
     
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .padding()
             .frame(maxWidth: .infinity)
@@ -21,7 +21,7 @@ struct ActionButtonStyle: ViewModifier {
     }
 }
 
-extension View {
+public extension View {
     func actionButtonStyled(closeButton: Bool = false) -> some View {
         modifier(ActionButtonStyle(closeButton: closeButton))
     }

@@ -31,7 +31,7 @@ public protocol ActionNavigator {
     mutating func checkAndGoToNextStep(_ step: ActionStepType) throws
 }
 
-extension ActionNavigator {
+public extension ActionNavigator {
     
     var currentStep: ActionStepType {
         if steps.isEmpty {

@@ -15,7 +15,7 @@ public protocol StepResult: CustomStringConvertible, Identifiable {
     var id: String { get }
 }
 
-extension StepResult {
+public extension StepResult {
     var id: String {
         (self as CustomStringConvertible).description
     }

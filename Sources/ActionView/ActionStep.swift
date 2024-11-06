@@ -20,7 +20,7 @@ public protocol ActionStep: Hashable {
     func hash(into hasher: inout Hasher)
 }
 
-extension ActionStep {
+public extension ActionStep {
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(stepType)
