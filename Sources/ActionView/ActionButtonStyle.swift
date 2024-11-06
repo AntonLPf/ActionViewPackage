@@ -19,7 +19,6 @@ struct ActionButtonStyle: ViewModifier {
             .foregroundColor(.white)
             .padding(8)
     }
-    
 }
 
 extension View {
