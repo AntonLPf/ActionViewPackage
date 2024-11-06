@@ -10,6 +10,11 @@ import SwiftUI
 public struct ActionStepView<Content: View, Config: ActionStepViewConfig>: View {
     @Binding var config: Config
     @ViewBuilder let content: () -> Content
+    
+    public init(config: Binding<Config>, @ViewBuilder content: @escaping () -> Content) {
+        _config = config
+        self.content = content
+    }
 
     public var body: some View {
         VStack {
