@@ -8,5 +8,8 @@
 import Foundation
 
 public protocol GameUpdater {
+    
     var isGameSaveNeeded: Bool { get }
+    
+    func update(game: inout UpdatableGame)
 }
