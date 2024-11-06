@@ -20,7 +20,7 @@ public protocol ActionStepViewConfig {
         
 }
 
-extension ActionStepViewConfig {
+public extension ActionStepViewConfig {
     
     mutating func closeActionView() {
         dismissSheet()
