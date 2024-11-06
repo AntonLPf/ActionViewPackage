@@ -11,13 +11,13 @@ public struct ActionView<Content: View>: View {
     let isCloseButtonStyle: Bool
     let cancelAction: ()->()
     let content: Content
-
-    init(title: String,
-         nextButtonCustomName: String? = nil,
-         nextButtonAction: @escaping ()->(),
-         isCloseButtonStyle: Bool = false,
-         cancelAction: @escaping ()->(),
-         @ViewBuilder content: () -> Content) {
+    
+    public init(title: String,
+                nextButtonCustomName: String? = nil,
+                nextButtonAction: @escaping ()->(),
+                isCloseButtonStyle: Bool = false,
+                cancelAction: @escaping ()->(),
+                @ViewBuilder content: () -> Content) {
         self.title = title
         self.nextButtonCustomName = nextButtonCustomName
         self.nextButtonAction = nextButtonAction
