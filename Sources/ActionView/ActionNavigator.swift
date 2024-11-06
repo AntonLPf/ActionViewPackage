@@ -23,9 +23,7 @@ public protocol ActionNavigator {
     func isDataAppropriateForCurrentStep(data: ActionStepType.StepDataType) -> Bool
 
     var finalResults: [ActionStepType.StepResultType] { get }
-    
-    var isGameSaveNeeded: Bool { get }
-        
+            
     func getStepData(stepType: ActionStepType.StepTypeType) -> ActionStepType.StepDataType?
     
     mutating func checkAndGoToNextStep(_ step: ActionStepType) throws
