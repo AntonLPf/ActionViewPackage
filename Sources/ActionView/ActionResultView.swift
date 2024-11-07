@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct ActionResultView<Content: View, Config: ActionStepViewConfig>: View {
+public struct ActionResultView<Content: View, Config: ActionStepViewConfig>: View {
     @Binding var config: Config
     @ViewBuilder let content: () -> Content
     
-    var body: some View {
+    public var body: some View {
         VStack {
             if #available(iOS 16.4, *) {
                 content()
