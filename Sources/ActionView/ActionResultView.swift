@@ -11,6 +11,11 @@ public struct ActionResultView<Content: View, Config: ActionStepViewConfig>: Vie
     @Binding var config: Config
     @ViewBuilder let content: () -> Content
     
+    public init(config: Binding<Config>, @ViewBuilder content: @escaping () -> Content) {
+        _config = config
+        self.content = content
+    }
+    
     public var body: some View {
         VStack {
             if #available(iOS 16.4, *) {
